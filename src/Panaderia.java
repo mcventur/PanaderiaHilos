@@ -24,7 +24,11 @@ public class Panaderia {
         barrasActuales--;
     }
 
+    public void cerrar(){
+        panaderiaCerrada = true;
+    }
 
-
-
+    public boolean isPanaderiaCerrada() {
+        return panaderiaCerrada;
+    }
 }
