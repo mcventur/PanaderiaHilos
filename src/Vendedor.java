@@ -2,10 +2,9 @@
 public class Vendedor extends Thread{
     private final int ITERACIONES = 50;
     private Panaderia panaderia;
-    private static int contadorVendedores = 1;
 
     public Vendedor(Panaderia panaderia) {
-        super("Vendedor" + contadorVendedores++);
+        super("Vendedor");
         this.panaderia = panaderia;
     }
 

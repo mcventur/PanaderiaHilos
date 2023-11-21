@@ -7,7 +7,6 @@
 // Pero requieren cambios para que se respeten las condiciones del ejercicio en un sistema concurrente
 public class Panaderia {
     private final int CAPACIDAD_MOSTRADOR = 5;
-    private boolean cerrada = false;
     private BarraPan[] mostrador = new BarraPan[CAPACIDAD_MOSTRADOR];
     private int barrasActuales = 0;
 
@@ -41,12 +40,4 @@ public class Panaderia {
         System.out.println("Vendida barra: " + vendida);
     }
 
-    public synchronized void cerrar() {
-        cerrada = true;
-        notifyAll();
-    }
-
-    public boolean isCerrada() {
-        return cerrada;
-    }
 }

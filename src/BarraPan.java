@@ -2,30 +2,17 @@
  * Modela una barra de pan, con un Tipo y un peso en Kgs
  */
 public class BarraPan {
-    private TipoBarraPan tipo;
+    private static int contadorBarras = 1;
+    private int idBarra;
 
 
 
-    /**
-     * Constructor
-     */
     public BarraPan() {
-        this.tipo = TipoBarraPan.getAleatorio();
+        this.idBarra = contadorBarras++;
     }
-
-    public TipoBarraPan getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(TipoBarraPan tipo) {
-        this.tipo = tipo;
-    }
-
 
     @Override
     public String toString() {
-        return "BarraPan{" +
-                "tipo=" + tipo +
-                '}';
+        return "Barra " + idBarra;
     }
 }
